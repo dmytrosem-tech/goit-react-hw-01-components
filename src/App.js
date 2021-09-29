@@ -1,21 +1,40 @@
-import "./App.css";
-import { Gallery } from "./components/Gallery/Gallery";
+import Profile from "./components/task-1/profile";
+import user from "./components/task-1/user.json";
 
-const galleryImages = {
-  title: "images",
-  description: "Best images",
-  images: ["lol", "lol"],
-};
+import Section from "./components/task-2/Section";
+import StatsList from "./components/task-2/StatsList";
+import statisticalData from "./components/task-2/statistical-data.json";
 
-const { title, description, images } = galleryImages;
+// // ---------------Profile--------------------->
+const profileMarkup = (
+  <Profile
+    userName={user.name}
+    tag={user.tag}
+    avatarUrl={user.avatar}
+    location={user.location}
+    followers={user.stats.followers}
+    views={user.stats.views}
+    likes={user.stats.likes}
+  />
+);
 
-function App() {
+// -------------Stats-------------------------->
+const statMarkup = (
+  <Section title="Upload stats">
+    <StatsList items={statisticalData} />
+  </Section>
+);
+
+// ------------joke--------------------------->
+const jopa = <div>ЖОПКА НАСТАЛА</div>;
+
+// ----------------------------------------RENDER----------------------------------->
+export default function App() {
   return (
-    <div className="App">
-      lol
-      <Gallery t={title} d={description} i={images} />
+    <div>
+      {profileMarkup}
+      {statMarkup}
+      {jopa}
     </div>
   );
 }
-
-export default App;
