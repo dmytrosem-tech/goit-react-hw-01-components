@@ -7,17 +7,13 @@ const galleryImages = {
   images: ["lol", "lol"],
 };
 
-const {title, description, images} = galleryImages
+const { title, description, images } = galleryImages;
 
 function App() {
   return (
     <div className="App">
       lol
-      <Gallery
-        t={title}
-        d={description}
-        i={images}
-      />
+      <Gallery t={title} d={description} i={images} />
     </div>
   );
 }
