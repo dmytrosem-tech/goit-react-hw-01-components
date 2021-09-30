@@ -35,7 +35,7 @@ const friendsListMarkup = <FriendList friends={friendsData} />;
 const transactionsMarkup = <TransactionHistory items={transactionsData} />;
 
 // ------------joke---------------------------->
-const jopa = <div>ЖОПКА НАСТАЛА</div>;
+const jopka = <div>ЖОПКА НАСТАЛА</div>;
 
 // ---------------------------------------------------------RENDER---------------------------------------------------------->
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
       {statsMarkup}
       {friendsListMarkup}
       {transactionsMarkup}
-      {jopa}
+      {jopka}
     </div>
   );
 }
