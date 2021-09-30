@@ -1,11 +1,16 @@
 import Profile from "./components/task-1/profile";
 import user from "./components/task-1/user.json";
 
-import Section from "./components/task-2/Section";
-import StatsList from "./components/task-2/StatsList";
+import Section from "./components/task-2/SectionOfStatistic";
 import statisticalData from "./components/task-2/statistical-data.json";
 
-// // ---------------Profile--------------------->
+import FriendList from "./components/task-3/FriendList";
+import friendsData from "./components/task-3/friends.json";
+
+import TransactionHistory from "./components/task-4/Transaction-History";
+import transactionsData from "./components/task-4/transaction-data.json";
+
+// ---------------Profile--------------------->
 const profileMarkup = (
   <Profile
     userName={user.name}
@@ -19,21 +24,27 @@ const profileMarkup = (
 );
 
 // -------------Stats-------------------------->
-const statMarkup = (
-  <Section title="Upload stats">
-    <StatsList items={statisticalData} />
-  </Section>
+const statsMarkup = (
+  <Section title="Upload stats" stats={statisticalData}></Section>
 );
 
-// ------------joke--------------------------->
+// ------------FriendList---------------------->
+const friendsListMarkup = <FriendList friends={friendsData} />;
+
+// ------------Transactions-------------------->
+const transactionsMarkup = <TransactionHistory items={transactionsData} />;
+
+// ------------joke---------------------------->
 const jopa = <div>ЖОПКА НАСТАЛА</div>;
 
-// ----------------------------------------RENDER----------------------------------->
+// ---------------------------------------------------------RENDER---------------------------------------------------------->
 export default function App() {
   return (
     <div>
       {profileMarkup}
-      {statMarkup}
+      {statsMarkup}
+      {friendsListMarkup}
+      {transactionsMarkup}
       {jopa}
     </div>
   );
