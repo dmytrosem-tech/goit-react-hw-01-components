@@ -1,14 +1,14 @@
-import Profile from "./components/task-1/profile";
-import user from "./components/task-1/user.json";
+import Profile from "./components/Profile/Profile";
+import user from "./components/Profile/user.json";
 
-import Section from "./components/task-2/SectionOfStatistic";
-import statisticalData from "./components/task-2/statistical-data.json";
+import Section from "./components/Statistics/Statistics";
+import statisticalData from "./components/Statistics/statistical-data.json";
 
-import FriendList from "./components/task-3/FriendList";
-import friendsData from "./components/task-3/friends.json";
+import FriendsList from "./components/FriendsList/FriendsList";
+import friendsData from "./components/FriendsList/friends.json";
 
-import TransactionHistory from "./components/task-4/Transaction-History";
-import transactionsData from "./components/task-4/transaction-data.json";
+import TransactionHistory from "./components/Transactions/Transactions";
+import transactionsData from "./components/Transactions/transaction-data.json";
 
 // ---------------Profile--------------------->
 const profileMarkup = (
@@ -29,7 +29,7 @@ const statsMarkup = (
 );
 
 // ------------FriendList---------------------->
-const friendsListMarkup = <FriendList friends={friendsData} />;
+const friendsListMarkup = <FriendsList friends={friendsData} />;
 
 // ------------Transactions-------------------->
 const transactionsMarkup = <TransactionHistory items={transactionsData} />;

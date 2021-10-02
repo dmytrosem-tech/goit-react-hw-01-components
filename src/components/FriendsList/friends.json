@@ -28,5 +28,11 @@
     "name": "Poly",
     "isOnline": false,
     "id": 1284
+  },
+  {
+    "avatar": "https://img.icons8.com/office/60/000000/cheburashka.png",
+    "name": "Che",
+    "isOnline": true,
+    "id": 1376
   }
 ]
