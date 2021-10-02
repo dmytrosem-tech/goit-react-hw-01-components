@@ -1,18 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./Statistics.module.css";
 
 function Section({ title, stats }) {
   return (
-    <section className="statistics">
-      {title && <h2>{title}</h2>}
-      <ul className="statistics__list">
-        {stats.map((item) => (
-          <li className="statistics__item" key={item.id}>
-            <span className="statistics__label">{item.label}</span>
-            <span className="statistics__percentage">{item.percentage}</span>
-          </li>
-        ))}
-      </ul>
+    <section className={styles.statistics}>
+      <div className={styles.statistics__box}>
+        {title && <h2 className={styles.statistics__title}>{title}</h2>}
+        <ul className={styles.statistics__list}>
+          {stats.map(({ label, percentage, id }) => (
+            <li className={styles.statistics__item} key={id}>
+              <span className={styles.statistics__label}>{label}</span>
+              <span className={styles.statistics__percentage}>
+                {percentage}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

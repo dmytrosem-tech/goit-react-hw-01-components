@@ -1,0 +1,85 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px 20px 20px;
+  background-color: rgb(250, 249, 208);
+  box-shadow: 0px 1px 1px rgba(94, 88, 88, 0.12),
+    0px 4px 4px rgba(100, 95, 95, 0.06), 1px 4px 6px rgba(102, 95, 95, 0.16);
+}
+
+.profile__descr {
+  width: 40%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 10px 20px;
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(197, 175, 175, 0.12),
+    0px 4px 4px rgba(180, 158, 158, 0.06), 1px 4px 6px rgba(156, 129, 129, 0.16);
+}
+
+.profile__avatar {
+  width: 130px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.profile__name {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.profile__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  max-width: 500px;
+  background-color: rgb(248, 241, 241);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(161, 136, 136, 0.12),
+    0px 4px 4px rgba(165, 133, 133, 0.06), 1px 4px 6px rgba(155, 129, 129, 0.16);
+}
+
+.profile__statsItem:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+.profile__statsItem:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.profile__statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  width: calc(100% / 3);
+  border: 1px solid rgb(216, 208, 208);
+}
+
+.profile__tag,
+.profile__location {
+  color: grey;
+}
+
+.profile__label {
+  color: grey;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.profile__followers,
+.profile__views,
+.profile__likes {
+  color: rgb(8, 8, 8);
+  font-weight: 600;
+}
