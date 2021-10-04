@@ -1,27 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import style from "./Transactions.module.css";
 
 export default function TransactionHistory({ items }) {
   return (
-    <table className="transactions">
-      <thead className="ransactions__head">
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
-
-      <tbody className="transactions__table">
-        {items.map(({ id, type, amount, currency }) => (
-          <tr className="transaction__item" key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+    <section className={style.section}>
+      <table className={style.table}>
+        <thead className={style.table__head}>
+          <tr className={style.table__row}>
+            <th className={style.table__headers}>Type</th>
+            <th className={style.table__headers}>Amount</th>
+            <th className={style.table__headers}>Currency</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody className={style.table__body}>
+          {items.map(({ id, type, amount, currency }) => (
+            <tr className={style.table__item} key={id}>
+              <td className={style.table__data}>{type}</td>
+              <td className={style.table__data}>{amount}</td>
+              <td className={style.table__data}>{currency}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
   );
 }
 

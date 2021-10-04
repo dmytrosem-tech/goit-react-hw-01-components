@@ -11,13 +11,19 @@
   color: green;
 }
 
+.friends__card {
+  max-width: 500px;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
 .friends__item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 20px;
+
   max-width: 500px;
-  width: 40%;
+  width: 100%;
   padding: 10px 20px;
   background-color: rgb(245, 240, 236);
   border: 1px solid rgb(190, 188, 188);
